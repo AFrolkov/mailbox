@@ -1,0 +1,7 @@
+tr {
+    cursor: pointer;
+}
+
+#messages td {
+    padding: 10px;
+}
