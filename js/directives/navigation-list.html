@@ -1,18 +1,18 @@
 <div class="list-group">
-  <a href="#" class="list-group-item active">
+  <a href="#" class="list-group-item active" ng-click="showMes({type: 'inbox'})">
     Inbox
-    <span class="badge">{{5+5}}</span>
+    <span class="badge">{{inbox}}</span>
   </a>
-  <a href="#" class="list-group-item">
+  <a href="#" class="list-group-item" ng-click="showMes({type: 'sent'})">
     Sent
-    <span class="badge">12</span>  
+    <span class="badge">{{sent}}</span>  
   </a>
-  <a href="#" class="list-group-item">
+  <a href="#" class="list-group-item" ng-click="showMes({type: 'spam'})">
     Spam
-    <span class="badge">4</span>
+    <span class="badge">{{spam}}</span>
   </a>
-  <a href="#" class="list-group-item">
+  <a href="#" class="list-group-item" ng-click="showContacts()">
     Contacts
-    <span class="badge">38</span>
+    <span class="badge">{{contacts}}</span>
   </a>
 </div>

@@ -1,75 +1,10 @@
 <div class="table-responsive">
-    <table id="messages" class="table table-condensed table-hover">
+    <table class="table table-condensed table-hover messages-list__table">
       <tbody>
-        <tr>
-          <td>a.frolkov</td>
-          <td>Hi! How are you? I have many news for you!</td>
-          <td>12.10.2015</td>
-        </tr>
-        <tr>
-          <td>1,002</td>
-          <td>amet</td>
-          <td>consectetur</td>
-        </tr>
-        <tr>
-          <td>1,003</td>
-          <td>Integer</td>
-          <td>nec</td>
-        </tr>
-        <tr>
-          <td>1,003</td>
-          <td>libero</td>
-          <td>Sed</td>
-        </tr>
-        <tr>
-          <td>1,004</td>
-          <td>dapibus</td>
-          <td>diam</td>
-        </tr>
-        <tr>
-          <td>1,005</td>
-          <td>Nulla</td>
-          <td>quis</td>
-        </tr>
-        <tr>
-          <td>1,006</td>
-          <td>nibh</td>
-          <td>elementum</td>
-        </tr>
-        <tr>
-          <td>1,007</td>
-          <td>sagittis</td>
-          <td>ipsum</td>
-        </tr>
-        <tr>
-          <td>1,008</td>
-          <td>Fusce</td>
-          <td>nec</td>
-        </tr>
-        <tr>
-          <td>1,009</td>
-          <td>augue</td>
-          <td>semper</td>
-        </tr>
-        <tr>
-          <td>1,010</td>
-          <td>massa</td>
-          <td>Vestibulum</td>
-        </tr>
-        <tr>
-          <td>1,011</td>
-          <td>eget</td>
-          <td>nulla</td>
-        </tr>
-        <tr>
-          <td>1,012</td>
-          <td>taciti</td>
-          <td>sociosqu</td>
-        </tr>
-        <tr>
-          <td>1,013</td>
-          <td>torquent</td>
-          <td>per</td>
+        <tr ng-repeat="message in messages" class="messages-list__table_message">
+          <td class="messages-list__table_message_author">{{message.author}}</td>
+          <td class="messages-list__table_message_body">{{message.body}}</td>
+          <td class="messages-list__table_message_date">{{message.date | date: 'dd/MM/yyyy hh:mm:ss'}}</td>
         </tr>
       </tbody>
     </table>

@@ -1,7 +1,29 @@
-tr {
+.messages-list__table tr {
     cursor: pointer;
 }
 
-#messages td {
-    padding: 10px;
+.messages-list__table .messages-list__table_message td{
+	padding: 10px;
+}
+
+.messages-list__table {
+	table-layout: fixed;
+}
+
+.messages-list__table_message_author {
+	width: 16%;
+	overflow: hidden;
+}
+
+.messages-list__table_message_body {
+	width: 65%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.messages-list__table_message_date {
+	width: 19%;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
 }
