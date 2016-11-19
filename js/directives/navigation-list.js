@@ -7,7 +7,8 @@ app.directive('navigationList', function() {
             spam: "@",
             contacts: "@",
             showMes: "&showMes",
-            showContacts: "&showContacts"
+            showContacts: "&showContacts",
+            currentTab: '@'
         },
         templateUrl: 'js/directives/navigation-list.html'
     };

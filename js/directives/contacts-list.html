@@ -1,0 +1,43 @@
+<table class="table table-bordered table-hover contacts-list__table" ng-repeat="contact in contacts">
+	<tbody>
+		<tr>
+			<td>Name</td>
+			<td>
+				<input ng-model="contact.name" ng-show="editName">
+				<span ng-show="!editName">{{contact.name}}</span>
+				<span class="glyphicon glyphicon-pencil" aria-hidden="true" ng-click="editName=!editName"
+					  ng-show="!editName">
+				</span>
+				<span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="editName=!editName"
+					  ng-show="editName">
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td>
+				<input ng-model="contact.email" ng-show="editEmail">
+				<span ng-show="!editEmail">{{contact.email}}</span>
+				<span class="glyphicon glyphicon-pencil" aria-hidden="true" ng-click="editEmail=!editEmail"
+					  ng-show="!editEmail">
+				</span>
+				<span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="editEmail=!editEmail"
+					  ng-show="editEmail">
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td>
+				<input ng-model="contact.address" ng-show="editAddress">
+				<span ng-show="!editAddress">{{contact.address}}</span>
+				<span class="glyphicon glyphicon-pencil" aria-hidden="true" ng-click="editAddress=!editAddress"
+					  ng-show="!editAddress">
+				</span>
+				<span class="glyphicon glyphicon-ok" aria-hidden="true" ng-click="editAddress=!editAddress"
+					  ng-show="editAddress">
+				</span>
+			</td>
+		</tr>
+	</tbody>
+</table>

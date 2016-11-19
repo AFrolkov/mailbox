@@ -4,8 +4,7 @@ app.directive('messageList', function() {
     return {
         restrict: 'E',
         scope: {
-            messages: "=",
-            contacts: "="
+            messages: "="
         },
         templateUrl: 'js/directives/message-list.html'
     };

@@ -1,17 +1,21 @@
 <div class="list-group">
-  <a href="#" class="list-group-item active" ng-click="showMes({type: 'inbox'})">
+  <a href="#" class="list-group-item" ng-class="{active: currentTab === 'inbox'}" 
+    ng-click="showMes({type: 'inbox'})">
     Inbox
     <span class="badge">{{inbox}}</span>
   </a>
-  <a href="#" class="list-group-item" ng-click="showMes({type: 'sent'})">
+  <a href="#" class="list-group-item" ng-class="{active: currentTab === 'sent'}" 
+    ng-click="showMes({type: 'sent'})">
     Sent
     <span class="badge">{{sent}}</span>  
   </a>
-  <a href="#" class="list-group-item" ng-click="showMes({type: 'spam'})">
+  <a href="#" class="list-group-item" ng-class="{active: currentTab === 'spam'}" 
+    ng-click="showMes({type: 'spam'})">
     Spam
     <span class="badge">{{spam}}</span>
   </a>
-  <a href="#" class="list-group-item" ng-click="showContacts()">
+  <a href="#" class="list-group-item" ng-class="{active: currentTab === 'contacts'}" 
+    ng-click="showContacts()">
     Contacts
     <span class="badge">{{contacts}}</span>
   </a>

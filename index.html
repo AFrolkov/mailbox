@@ -9,6 +9,7 @@
         <script src="js/angular.js"></script>
         <script src="js/directives/message-list.js"></script>
         <script src="js/directives/navigation-list.js"></script>
+        <script src="js/directives/contacts-list.js"></script>
         <script src="js/controllers/messages-controller.js"></script>
         <script src="js/services/mail-service.js"></script>
     </head>
@@ -37,10 +38,12 @@
         <div class="col-md-2">
             <navigation-list inbox="{{m.inbox.length}}" sent="{{m.sent.length}}" 
                 spam="{{m.spam.length}}" contacts="{{m.contacts.length}}"
-                show-mes="m.showMessages(type)" show-contacts="m.showContacts()"></navigation-list>
+                show-mes="m.showMessages(type)" show-contacts="m.showContacts()"
+                current-tab="{{m.currentTab}}"></navigation-list>
         </div>
         <div class="col-md-10">
-          <message-list messages="m.messages" contacts="m.contacts"></message-list>
+          <message-list messages="m.messages" ng-show="m.showMes"></message-list>
+          <contacts-list contacts="m.contacts" ng-show="m.showCont"></contacts-list>
       </div>
     </div>
 </body>
